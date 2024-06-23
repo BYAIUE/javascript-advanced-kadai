@@ -109,11 +109,12 @@ const timeUp = () => {
 const gameOver = id => {
     clearInterval(id);
 
-    // タイムアップを表示
-    timeUp();
 
     // 100ms遅らせる
     setTimeout(() => {
+    // タイムアップを表示
+    timeUp();
+    
     const result = confirm(rankCheck(score));
 
     // OKボタンをクリックされたらリロードする
